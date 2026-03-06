@@ -29,7 +29,8 @@ namespace _1_7_Summative
             Console.WriteLine("You got lucky! You won $100 worth of plays. Awesome!");
             Console.WriteLine("Write Rock, Paper, or Scissors when the prompt that says Rock, Paper, Scissors, Shoot is shown.");
             Console.WriteLine("If you tie, You do not Gain Nor Lose any money.");
-            Console.WriteLine("If You Win, your cash will multiply by 3.2, AND you'll get your bet back! If you guess incorrectly, you will lose your     bet.");
+            Console.WriteLine("If You Win, your bet will multiply by 3.2! If you guess incorrectly, you will lose your bet.");
+            Console.WriteLine("You can quit whenever the prompt shows up.");
             Console.WriteLine("If you run out of money, it's Game Over.");
             Console.WriteLine("Let's get started!");
 
@@ -78,54 +79,60 @@ namespace _1_7_Summative
                 {
                     Console.WriteLine("Nice one! Rock Beats Scissors. You gained " + (bet * 3.2).ToString("C"), " on top of your origional bet!");
                      money += (bet * 3.2);
+                    Console.WriteLine("    _______\r\n---'   ____)_____\r\n          _______)\r\n       ___________)\r\n      (____)\r\n---.__(___)"); 
                 }
 
                 if (play == "rock" && randomPlay == 1) 
                 {
                     Console.WriteLine("Oh, A Tie! You still have " + bet.ToString("C"), ".");
                     money += bet;
+                    Console.WriteLine("    _______\r\n---'   ____)\r\n      (_____)\r\n      (_____)\r\n      (____)\r\n---.__(___)\r\n");
                 }
 
                 if (play == "rock" && randomPlay == 2) 
                 {
                     Console.WriteLine("Oh, You lose! You lost " + (bet).ToString("C"), ".");
-                     money -= bet;
+                    Console.WriteLine("    _______\r\n---'   ____)______\r\n          ________)\r\n          _________)\r\n         _________)\r\n---.____________)"); 
                 }
 
                 if (play == "paper" && randomPlay == 3) 
                 {
                     Console.WriteLine("Oh, You lose! You lost " + (bet).ToString("C"), ".");
-                    money -= bet;
+                    Console.WriteLine("    _______\r\n---'   ____)_____\r\n          _______)\r\n       ___________)\r\n      (____)\r\n---.__(___)");
                 }
 
                 if (play == "paper" && randomPlay == 1)
                 {
                     Console.WriteLine("Nice one! Paper beats Rock! You gained " + (bet * 3.2).ToString("C"), " on top of your origional bet!");
                     money += (bet * 3.2);
+                    Console.WriteLine("    _______\r\n---'   ____)\r\n      (_____)\r\n      (_____)\r\n      (____)\r\n---.__(___)\r\n");
                 }
 
                 if (play == "paper" && randomPlay == 2)
                 {
                     Console.WriteLine("Oh, A Tie! You still have " + bet.ToString("C"), ".");
                     money += bet;
+                    Console.WriteLine("    _______\r\n---'   ____)______\r\n          ________)\r\n          _________)\r\n         _________)\r\n---.____________)");
                 }
 
                 if (play == "scissors" && randomPlay == 3)
                 {
                     Console.WriteLine("Oh, A Tie! You still have " + bet.ToString("C"), ".");
                     money += bet;
+                    Console.WriteLine("    _______\r\n---'   ____)_____\r\n          _______)\r\n       ___________)\r\n      (____)\r\n---.__(___)");
                 }
 
                 if (play == "scissors" && randomPlay == 1)
                 {
                     Console.WriteLine("Oh, You Lose! You lost " + (bet).ToString("C"), ".");
-                    money -= bet;
+                    Console.WriteLine("    _______\r\n---'   ____)\r\n      (_____)\r\n      (_____)\r\n      (____)\r\n---.__(___)\r\n");
                 }
 
                 if (play == "scissors" && randomPlay == 2)
                 {
                     Console.WriteLine("Nice one! Scissors beats Paper! You gained " + (bet * 3.2).ToString("C"), " on top of your origional bate!");
                     money += (bet * 3.2);
+                    Console.WriteLine("    _______\r\n---'   ____)______\r\n          ________)\r\n          _________)\r\n         _________)\r\n---.____________)");
                 }
 
                 Console.WriteLine("Would you like to continue playing? Yes or No?");
@@ -146,7 +153,7 @@ namespace _1_7_Summative
 
                 if (money <= 0)
                 {
-                    Console.WriteLine("You are out of money. Deposit more, or go home, you bum.");
+                    Console.WriteLine("You are out of money. Deposit more, or go home.");
                     done = true;
                 }
             }
